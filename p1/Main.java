@@ -19,13 +19,17 @@ public class Main {
 
         Comparator<Integer> c = new EnterosComparador();
         Sort<Integer> quickSort = new QuickSort<Integer>(c);
+        Sort<Integer> insertionSort = new InsertionSort<Integer>();
         List<Integer> listaQuickSort = new ArrayList<Integer>();
+        List<Integer> listaInsertionSort = new ArrayList<>();
 
         for(int i = 0; i < ejemplos; i++) {
             listaQuickSort.add(quickSort.tMedSort(i, 100));
+            listaInsertionSort.add(insertionSort.tMedSort(i, 100));
         }
 
         GraficaTiempos graph = new GraficaTiempos(listaQuickSort);
+        graph.addList(listaInsertionSort);
         graph.createAndShowGui();
 
     }

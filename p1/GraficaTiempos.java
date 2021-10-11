@@ -152,7 +152,12 @@ public class GraficaTiempos extends JPanel {
     }
 
     public void createAndShowGui() {
-        GraficaTiempos mainPanel = new GraficaTiempos(puntos.get(0));
+        /**
+         * TODO hacer que se puedan pintar hasta 4 graficas con distinto color (Se puede hacer que reciba una lista de puntos y un color en el constructor
+         * puntos[0] es la lista de Quicksort y puntos[1] es la lista de InsertionSort
+         */
+        //GraficaTiempos mainPanel = new GraficaTiempos(puntos.get(0));
+        GraficaTiempos mainPanel = new GraficaTiempos(puntos.get(1));
         mainPanel.setPreferredSize(new Dimension(900, 700));
         JFrame frame = new JFrame("Grafica de tiempos medios");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
