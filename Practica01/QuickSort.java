@@ -1,6 +1,8 @@
-package da.p1;
+package Practica01;
 
 import java.util.Comparator;
+import java.util.Random;
+
 /**
  * Clase para ordenar una secuencia de objetos de tipo T usando ordenacion rapida (quicksort)
  * @author Jose Luis Montaña, Cruz E. Borges, Ines Gonzalez
@@ -8,9 +10,10 @@ import java.util.Comparator;
  * @param <T extends Comparable<T>>
  */
 
-public class QuickSort<T> implements Sort<T>
-{
+public class QuickSort<T> implements Sort<T> {
+
 	private Comparator<T> comp;
+    private int coste = 0;
 
     /**
      * Constructor por defecto
@@ -33,24 +36,47 @@ public class QuickSort<T> implements Sort<T>
      * método para ordenar una secuencia de principio a fin por inserción
      * @param d la secuencia de objetos de tipo T
      */
-    public void sort( T[] d ){
-    	sort( d, 0, d.length - 1 ); 
+    public int sort( T[] d ){
+    	return sort( d, 0, d.length - 1 );
     	}
+
+    @Override
+    public int tMedSort(int n, int num) {
+        //Inicializa las variables necesarias e instancia un comparador y algoritmo de ordenacion
+        int estimacion = 0;
+        Integer vector[] = new Integer[n];
+        Random rd = new Random();
+        Comparator<Integer> c = new EnterosComparador();
+        Sort<Integer> in = new QuickSort<Integer>(c);
+
+        //Itera desde 0 a numero de ejemplos
+        for(int j = 0; j < num; j++) {
+
+            //Inicializa el vector con numeros aleatorios
+            for(int i = 0; i < n; i++) {
+                vector[i] = rd.nextInt();
+            }
+            estimacion += in.sort(vector);
+        }
+        return estimacion/num;
+    }
 
     /**
      * método para ordenar una secuencia entre dos posiciones dadas usando inserción
      * @param d la secuencia de objetos de tipo T
      * @param start la posición inicial
      * @param end la posición final
+     * TODO revisar las operaciones de coste constante
      */
-    public void sort( T[] d, int start, int end ){
+    public int sort( T[] d, int start, int end ){
         if ( start >= end )
-            return;
+            return 0;
             
         int p = partition( d, start, end );
 
         sort( d, start, p - 1 );
         sort( d, p + 1, end );
+        return coste;
     }
     
     /**
@@ -67,11 +93,16 @@ public class QuickSort<T> implements Sort<T>
         int high = end;
         
         while ( low < high ){
-        	while ( compare( d[ ++low ], pivot ) < 0 ) ;
+        	while ( compare( d[ ++low ], pivot ) < 0 ) coste++;
+
             // low pasa a ser la posicion mas a izda con elemento mayor que pivot
-            while ( compare( pivot, d[ --high ] ) < 0 && high > low) ;
+            while ( compare( pivot, d[ --high ] ) < 0 && high > low) coste++;
+
             // high pasa a ser la posicion mas a dcha (y mayor que low) con elemento menor que pivot
-            if( low < high) exchange( d, low, high );// intercambiamos low y high si low<high
+            if( low < high) {
+                exchange( d, low, high );// intercambiamos low y high si low<high
+                coste++;
+            }
         }
         exchange( d, low, end );// coloca el pivote en el "centro"
         return low;// retorna posicion del pivote

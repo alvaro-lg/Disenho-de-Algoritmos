@@ -1,4 +1,4 @@
-package da.p1;
+package Practica01;
 
 /**
  * Interfaz para ordenar una secuencia de objetos de tipo T
@@ -7,6 +7,13 @@ package da.p1;
  */
 public interface Sort<T>
 {
-    public void sort( T[] d, int start, int end );
-    public void sort( T[] d );
+    public int sort( T[] d, int start, int end );
+    public int sort( T[] d );
+
+
+    /**
+     * Retorna una estimacion del tiempo medio de ordenar vectores de n
+     * componentes usando num ejemplos aleatoriamente generados
+     */
+    public int tMedSort(int n, int num);
 }
