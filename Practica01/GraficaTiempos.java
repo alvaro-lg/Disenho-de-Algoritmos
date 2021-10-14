@@ -183,8 +183,6 @@ public class GraficaTiempos extends JPanel {
 			puntos.add((int) (k * Math.pow(x, 2)));
 		}
 
-		System.out.println(puntos);
-
 		this.lineas.add(new LineaAuxiliar(puntos));
 	}
 
@@ -194,8 +192,6 @@ public class GraficaTiempos extends JPanel {
 		for (int x = 0; x < maxX; x++) {
 			puntos.add((int) (k * x * Math.log(x)));
 		}
-
-		System.out.println(puntos);
 
 		this.lineas.add(new LineaAuxiliar(puntos));
 	}

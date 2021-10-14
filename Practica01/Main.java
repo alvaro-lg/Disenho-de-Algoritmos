@@ -9,7 +9,7 @@ import java.util.Random;
 public class Main {
 
     public static void main(String[] args){
-        int ejemplos = 100;
+        int ejemplos = 500;
         int k1 = 26;
         int k2 = 61;
 
