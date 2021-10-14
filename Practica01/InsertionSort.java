@@ -72,6 +72,7 @@ public class InsertionSort<T> implements Sort<T> {
         // j indexa el elemento que se va a insertar
         // i indexa las posibles posiciones en las que se podría insertar el elemento j
         for ( j = start + 1; j <= end; j++ ){
+            coste++;
             key = d[ j ];
             for ( i = j - 1; i >= 0 && compare( key, d[ i ] ) < 0; i-- ) {
                 coste++;
