@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.params=text
+comment0.target=CompresorException(java.lang.String)
+comment0.text=\n\ Constructor\ de\ objetos\ de\ la\ clase.\n\ \n\ @param\ text\ Texto\ a\ mostrar\ por\ la\ excepci\uFFFDn.\n
+numComments=1

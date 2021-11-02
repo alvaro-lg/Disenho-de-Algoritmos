@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=arbolBin\ dim
+comment0.target=JTreePanel(Tree,\ java.awt.Dimension)
+comment0.text=\n\ Constructor\ de\ objetos\ de\ la\ clase.\n\ \n\ @param\ arbolBin\ arbol\ binario\ a\ dibujar.\n\ @param\ dim\ \ \ \ \ \ Dimension\ del\ panel.\n
+comment1.params=g
+comment1.target=void\ paintComponent(java.awt.Graphics)
+comment2.params=g2\ nodo\ x\ y\ separ
+comment2.target=void\ drawBinaryTree(java.awt.Graphics2D,\ Tree,\ int,\ int,\ double)
+comment2.text=\n\ \ Metoodo\ que\ dibuja\ un\ arbol\ binario.\n\ \ \n\ @param\ g2\ \ \ \ Objeto\ que\ proporciona\ las\ operaciones\ de\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ dibujado.\n\ @param\ nodo\ \ Nodo\ actual\ del\ arbol.\n\ @param\ x\ \ \ \ \ Coordenada\ <i>X</i>\ actual.\n\ @param\ y\ \ \ \ \ Coordenada\ <i>Y</i>\ actual.\n\ @param\ separ\ Separacion\ actual\ entre\ nodos.\n
+numComments=3
