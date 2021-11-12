@@ -1,6 +1,11 @@
 import java.util.Arrays;
 import java.util.Random;
 
+/**
+ * Clase principal de la Practica 4 de Disenho de Algoritmos
+ * @author Jairo Gonzalez, Alvaro Lopez, Nicolas Rodrigo
+ * @version 12-11-2021
+ */
 public class Main {
 
     // Constante con la lista de valores del numero de matrices con los que se realizara el experimento
