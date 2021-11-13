@@ -5,7 +5,7 @@ import java.util.*;
  * @author Jairo Gonzalez, Alvaro Lopez, Nicolas Rodrigo
  * @version 12-11-2021
  */
-public class Main {
+public class MainVrz {
 
     // Constante con la lista de valores del numero de matrices con los que se realizara el experimento
     private static final int[] NUM_MATRICES_EXP = {3, 4, 5, 6, 7, 8};
