@@ -1,3 +1,5 @@
+package Practica04_Voraz;
+
 import java.util.*;
 
 /**
@@ -24,7 +26,8 @@ public class MainVrz {
             int mults = 0;
 
             // Lista con dimensiones
-            ArrayList<Integer> dims = new ArrayList<Integer>();
+            int dims_size = num + 1;
+            int[] dims = new int[num + 1];
 
             // Cola de prioridad con dimensiones
             Queue<Integer> dims_prior = new PriorityQueue<Integer>(Collections.reverseOrder());
@@ -33,24 +36,33 @@ public class MainVrz {
             // Inicializacion aleatoria de las dimensiones de las matrices con las que se va a experimentar
             for (int n = 0; n < num + 1; n++) {
                 int aux = rand.nextInt(MAX - 2 + 1) + 2;
-                dims.add(aux);
+                dims[n] = aux;
                 dims_prior.add(aux);
             }
 
+            System.out.println(Arrays.toString(dims));
 
-            for (int i = 0; i < num - 1; i++) {
+            // Implementacion voraz del algorirmo: En cada iteracion multiplica aquellas matrices de dimensiones mxn y
+            // nxr tal que n -> max
+            for (int i = 0; i <= num - 1; i++) {
                 int max_dim = dims_prior.poll();
-                System.out.println(dims.toString());
-                System.out.println(max_dim);
-                for (int j = 1; j < dims.size() - 1; j++) {
-                    if (dims.get(j) == max_dim) {
-                        mults += dims.get(j - 1) * dims.get(j) * dims.get(j + 1);
-                        dims.remove(j);
+                boolean encontrado = false;
+                if (dims_size > 3) {
+                    for (int j = 1; j < dims_size ; j++) {
+                        if (dims[j] == max_dim && j < dims_size - 1) {
+                            mults += dims[j - 1] * dims[j] * dims[j + 1];
+                            /*System.out.println("Multiplicar M(" + dims[j - 1] + " x " + dims[j] + ") " +
+                                    "por M(" + dims[j] + " x " + dims[j+1] + ")");*/
+                            encontrado = true;
+                            dims_size--;
+                        }
+                        if (encontrado) {
+                            dims[j] = dims[j+1];
+                        }
                     }
-                }
+                } else break;
             }
-            mults += dims.get(0) * dims.get(1) * dims.get(2);
-            System.out.println(dims.toString());
+            mults += dims[0] * dims[1] * dims[2];
 
             System.out.println("SOLUCION: " + mults);
 
