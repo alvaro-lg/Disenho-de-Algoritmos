@@ -12,11 +12,15 @@ public class Main {
     private static final int[] NUM_MATRICES_EXP = {3, 4, 5, 6, 7, 8};
 
     // Constante con el maximo valor que pueden tomar la lista de dimensiones
-    private static final int MAX = 100; // TODO: Averigual cual se especifica que sea en el enunciado
+    private static final int MAX = 100;
 
     public static void main(String[] args){
+        int[] dims_aux = new int[9];
 
         Random rand = new Random();
+        for (int n = 0; n < 9; n++) {
+            dims_aux[n] = rand.nextInt(MAX - 2 + 1) + 2;
+        }
 
         // Iteramos el numero de matrices con las que se va a operar en cada experimento
         for (int num : NUM_MATRICES_EXP) {
@@ -24,10 +28,9 @@ public class Main {
             // Array con dimensiones
             int[] dims = new int[num + 1];
 
-            // TODO: Cambiar si se quiere que en cada iteracion las dimensiones sean distintas
             // Inicializacion aleatoria de las dimensiones de las matrices con las que se va a experimentar
             for (int n = 0; n < num + 1; n++) {
-                dims[n] = rand.nextInt(MAX - 2 + 1) + 2;
+                dims[n] = dims_aux[n];
             }
 
             System.out.println(Arrays.toString(dims));
