@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=size
+comment0.target=Diccionario(int)
+comment0.text=\n\ Constructor\ de\ objetos\ de\ la\ clase.\n\ \n\ @param\ size\ Tama\u00F1oo\ del\ diccionario.\n
+comment1.params=letra\ codigo
+comment1.target=void\ setEntradaDeDiccionario(char,\ java.lang.Boolean[])
+comment1.text=\n\ Metodo\ que\ a\u00F1ade\ una\ letra\ y\ su\ codigo\ al\ diccionario.\n\ \n\ @param\ letra\ \ Letra\ a\ a\u00F1adir.\n\ @param\ codigo\ Codigo\ a\ a\u00F1adir.\n
+comment2.params=letra
+comment2.target=java.lang.Boolean[]\ getCodificacion(char)
+comment2.text=\n\ Metodo\ que\ obtiene\ la\ codificacion\ binaria\ de\ la\ letra.\n\ \n\ @param\ letra\ Letra\ de\ la\ que\ obtener\ su\ codificacion\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ binaria.\n\ @return\ \ \ \ \ \ La\ codificacion\ binaria\ de\ la\ letra.\n
+comment3.params=codigo
+comment3.target=java.lang.String\ boolArraytoString(java.lang.Boolean[])
+comment3.text=\n\ Metodo\ que\ obtiene\ la\ representacion\ grafica\ binaria\n\ del\ codigo.\n\ \n\ @param\ codigo\ Codigo\ del\ que\ obtener\ su\ representacion\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ grafica\ binaria.\n\ @return\ \ \ \ \ \ \ La\ representacion\ grafica\ binaria\ del\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ codigo.\n
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment4.text=\n\ Metodo\ que\ muestra\ la\ representacion\ grafica\ del\n\ diccionario.\n\ \n\ @return\ La\ representacion\ grafica\ del\ diccionario.\n
+numComments=5

@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=a
+comment0.target=java.lang.Boolean[]\ int2bin(int)
+comment0.text=\n\ Metoodo\ que\ transforma\ un\ numero\ en\ un\ vector\ de\ booleanos.\n\ \n\ @param\ a\ Numero\ a\ transformar.\n\ @return\ \ La\ representacion\ binaria\ del\ numero.\n
+comment1.params=num
+comment1.target=java.lang.String\ int2binS(int)
+comment1.text=\n\ Metodo\ que\ transforma\ un\ numero\ en\ su\ representacion\n\ binaria.\n\ \n\ @param\ num\ Numero\ a\ transformar.\n\ @return\ \ \ \ La\ representacion\ binaria\ del\ numero.\n
+numComments=2

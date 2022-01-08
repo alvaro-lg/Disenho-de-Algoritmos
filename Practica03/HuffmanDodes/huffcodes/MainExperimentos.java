@@ -1,3 +1,5 @@
+package huffcodes;
+
 import java.nio.charset.StandardCharsets;
 import java.util.Random;
 import java.util.Vector;
@@ -10,8 +12,8 @@ import static huffcodes.Compresor.*;
 public class MainExperimentos {
 
     //Variables para la ejecucion del experimento, se pueden cambiar para comprobar distintos rangos
-    private static final int MAX_EXPERIMENTOS = 1000;
-    private static final int MAX_LEN = 1000;
+    private static final int MAX_EXPERIMENTOS = 500;
+    private static final int MAX_LEN = 2000;
     private static final int MIN_LEN = 10;
 
 

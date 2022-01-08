@@ -121,7 +121,6 @@ public class Main {
     /**
      * Metodo para obtener un mapa cuya clave es un caracter y su valor es la frecuencia
      * @param s Texto en el que se busca la frecuencia
-     * @param conjuntoLetras Conjunto de letras
      * @return vectorFrecuencias, un mapa con las frecuencias de los caracteres
      */
     private static Map<Character, Integer> getFrecuencias(String s) {
